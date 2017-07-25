@@ -19,7 +19,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
             locationManager.startUpdatingLocation()
             self.myMap.showsUserLocation = false
         }
-        print("reached view did load -compleate")
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,8 +35,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
         
         let location = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
         findloc(localr: location)
-        print("Sended user location")
-        
     }
     
     func removeAllAnnotations() {
@@ -54,10 +51,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
         switch oldState {
         case .starting:
             view.dragState = .dragging
-       
             print("print ----- dragg")
-            
-         
             case .ending:
                 let currentAnnotationLattitude = view.annotation?.coordinate.latitude
                 let currentAnnotationLongitude = view.annotation?.coordinate.longitude
@@ -142,14 +136,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
                     }
                     
                     
-                    print("+++++++\(addressString)+++++++++++++++")
-                    
-                //    self.removeAllAnnotations()
-
-                    
+                    print("\(String(describing: subThoroughfare))  \(String(describing: thoroughfare))  \(String(describing: subLocality))  \(String(describing: locality))  \(String(describing: postalCode))  \(String(describing: country)) ")
                     DispatchQueue.main.async {
-                        let pinr = pinAnnotation(address: subThoroughfare ?? "", street: thoroughfare ?? "", locality: subLocality ?? "", city: locality ?? "", country: country ?? ""
-                            , pincode: postalCode ?? "") as MKPointAnnotation
+                        let pinr = MKPointAnnotation()
                         pinr.coordinate.longitude = localr.longitude
                         pinr.coordinate.latitude = localr.latitude
                         pinr.title = addressString
@@ -157,11 +146,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
                         self.annotationGroup.append(pinr)
                         self.myMap.addAnnotations(self.annotationGroup)
                         self.myMap.showAnnotations(self.annotationGroup, animated: true)
-                        
                         print("Completed getting address \(pinr.coordinate.latitude)    \(pinr.coordinate.longitude)")
-                        
                         print(" ======address: \(addressString),\(addresscountry)=========")
-                        
                         self.locationManager.stopUpdatingLocation()
                     }
                 }

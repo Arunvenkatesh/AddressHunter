@@ -12,9 +12,6 @@
 		55AD934A1F21DF240044B5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AD93481F21DF240044B5D2 /* Main.storyboard */; };
 		55AD934C1F21DF240044B5D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55AD934B1F21DF240044B5D2 /* Assets.xcassets */; };
 		55AD934F1F21DF240044B5D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AD934D1F21DF240044B5D2 /* LaunchScreen.storyboard */; };
-		55AD935C1F21EFE40044B5D2 /* pinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD935B1F21EFE40044B5D2 /* pinAnnotation.swift */; };
-		55AD93621F220D1E0044B5D2 /* VCmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD93611F220D1E0044B5D2 /* VCmapView.swift */; };
-		55AD93661F220E690044B5D2 /* pina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD93651F220E690044B5D2 /* pina.swift */; };
 		55AD93681F2216530044B5D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD93671F2216530044B5D2 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,9 +23,6 @@
 		55AD934B1F21DF240044B5D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55AD934E1F21DF240044B5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55AD93501F21DF240044B5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55AD935B1F21EFE40044B5D2 /* pinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinAnnotation.swift; sourceTree = "<group>"; };
-		55AD93611F220D1E0044B5D2 /* VCmapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCmapView.swift; sourceTree = "<group>"; };
-		55AD93651F220E690044B5D2 /* pina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pina.swift; sourceTree = "<group>"; };
 		55AD93671F2216530044B5D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -66,9 +60,6 @@
 			children = (
 				55AD93441F21DF240044B5D2 /* AppDelegate.swift */,
 				55AD93461F21DF240044B5D2 /* ViewController.swift */,
-				55AD935B1F21EFE40044B5D2 /* pinAnnotation.swift */,
-				55AD93651F220E690044B5D2 /* pina.swift */,
-				55AD93611F220D1E0044B5D2 /* VCmapView.swift */,
 				55AD93481F21DF240044B5D2 /* Main.storyboard */,
 				55AD934B1F21DF240044B5D2 /* Assets.xcassets */,
 				55AD934D1F21DF240044B5D2 /* LaunchScreen.storyboard */,
@@ -163,11 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55AD93621F220D1E0044B5D2 /* VCmapView.swift in Sources */,
-				55AD935C1F21EFE40044B5D2 /* pinAnnotation.swift in Sources */,
 				55AD93471F21DF240044B5D2 /* ViewController.swift in Sources */,
 				55AD93451F21DF240044B5D2 /* AppDelegate.swift in Sources */,
-				55AD93661F220E690044B5D2 /* pina.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +321,7 @@
 				55AD93551F21DF240044B5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
